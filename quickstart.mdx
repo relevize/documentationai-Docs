@@ -1,13 +1,14 @@
 ---
 title: Quickstart Guide
-description: Get up and running with Relevize in minutes by setting up your account and creating your first documentation space.
+description: >-
+  Get up and running with Relevize in minutes by setting up your account and
+  creating your first documentation space.
 ---
-
 ## Overview
 
-Relevize helps you organize and manage project documentation with ease. Follow these steps to create your account, set up a documentation space, add your first page, and navigate effectively. You will have a fully functional docs site in under 5 minutes.
+Relevize helps you organize and manage project documentation with ease. Follow these steps to create your account, set up a documentation space, add your first page, and navigate effectively. You will have a fully functional docs site in under 5 minutes. test123
 
-<Callout kind="tip">
+<Callout kind="tip" collapsed="false">
   Bookmark your dashboard at `https://app.relevize.com` for quick access.
 </Callout>
 
@@ -16,13 +17,15 @@ Relevize helps you organize and manage project documentation with ease. Follow t
 Sign up for Relevize to start building documentation spaces.
 
 <Steps>
-  <Step title="Visit the signup page" icon="globe">
+  <Step title="Visit the signup page" icon="globe" title-type="p">
     Go to `https://relevize.com/signup`.
   </Step>
-  <Step title="Enter your details" icon="user">
+
+  <Step title="Enter your details" icon="user" title-type="p">
     Provide your email, create a strong password, and select your team name.
   </Step>
-  <Step title="Verify email" icon="mail">
+
+  <Step title="Verify email" icon="mail" title-type="p">
     Check your inbox and click the verification link. You land on the dashboard.
   </Step>
 </Steps>
@@ -35,9 +38,11 @@ Access your account using your preferred method.
   <Tab title="Email & Password" icon="mail">
     Enter your credentials at `https://app.relevize.com/login`.
   </Tab>
+
   <Tab title="Google" icon="apple">
     Click "Continue with Google" and authorize Relevize.
   </Tab>
+
   <Tab title="GitHub" icon="github">
     Select "Continue with GitHub" and grant repository access if needed.
   </Tab>
@@ -48,13 +53,15 @@ Access your account using your preferred method.
 Organize docs by creating dedicated spaces for projects.
 
 <Steps>
-  <Step title="Click New Space" icon="plus">
+  <Step title="Click New Space" icon="plus" title-type="p">
     From the dashboard, select **New Documentation Space**.
   </Step>
-  <Step title="Name your space" icon="edit-3">
+
+  <Step title="Name your space" icon="edit-3" title-type="p">
     Enter a name like `My Project Docs` and choose a slug such as `my-project`.
   </Step>
-  <Step title="Customize settings" icon="settings">
+
+  <Step title="Customize settings" icon="settings" title-type="p">
     Set brand color to `#3B82F6`, add a logo, and save. Your space is ready.
   </Step>
 </Steps>
@@ -64,39 +71,42 @@ Organize docs by creating dedicated spaces for projects.
 Build content using MDX for rich, interactive docs.
 
 <Steps>
-  <Step title="Create a page" icon="file-plus">
+  <Step title="Create a page" icon="file-plus" title-type="p">
     In your space, click **New Page** and name it `introduction.mdx`.
   </Step>
-  <Step title="Edit with MDX" icon="code">
+
+  <Step title="Edit with MDX" icon="code" title-type="p">
     Use the editor to add frontmatter and content. Preview changes live.
   </Step>
-  <Step title="Publish" icon="upload">
+
+  <Step title="Publish" icon="upload" title-type="p">
     Click **Publish** to make your page live.
   </Step>
 </Steps>
 
 Here is a complete example for your first page:
 
-<CodeGroup tabs="Frontmatter,Full Page">
+<CodeGroup show-lines="true" tabs={[]}>
   ```yaml
----
-title: Introduction
-description: Welcome to My Project Docs
----
+  ---
+  title: Introduction
+  description: Welcome to My Project Docs
+  ---
   ```
+
   ```mdx
----
-title: Introduction
-description: Welcome to My Project Docs
----
+  ---
+  title: Introduction
+  description: Welcome to My Project Docs
+  ---
 
-## Welcome
+  ## Welcome
 
-Start building interactive docs with Relevize.
+  Start building interactive docs with Relevize.
 
-<Callout kind="success">
+  <Callout kind="success">
   Your docs are now live!
-</Callout>
+  </Callout>
   ```
 </CodeGroup>
 
@@ -104,27 +114,33 @@ Start building interactive docs with Relevize.
 
 Explore key areas using these navigation options.
 
-<Columns cols={2}>
-  <Card title="Dashboard" icon="layout" href="/dashboard">
+<Columns cols="2">
+  <Card title="Dashboard" href="/dashboard" icon="layout" horizontal="false">
     View all spaces and recent activity.
   </Card>
-  <Card title="Spaces" icon="folder" href="/spaces">
+
+  <Card title="Spaces" href="/spaces" icon="folder" horizontal="false">
     Manage multiple documentation spaces.
   </Card>
-  <Card title="Pages" icon="file-text" href="/pages">
+
+  <Card title="Pages" href="/pages" icon="file-text" horizontal="false">
     Edit, reorder, or delete pages.
   </Card>
-  <Card title="Settings" icon="settings" href="/settings">
+
+  <Card title="Settings" href="/settings" icon="settings" horizontal="false">
     Update branding and integrations.
   </Card>
 </Columns>
 
 <Expandable title="Troubleshooting Common Issues" default-open="false">
   - **Login fails?** Clear browser cache or try incognito mode.
+
   - **Page not publishing?** Check for syntax errors in MDX, like unescaped `{` characters.
+
   - **Need help?** Use the support chat in the bottom-right corner.
 </Expandable>
 
-<Callout kind="success">
+<Callout kind="success" collapsed="false">
   Congratulations! You now have a live documentation space. Explore advanced features like custom domains and analytics next.
 </Callout>
+
