@@ -1,0 +1,107 @@
+---
+title: Frequently Asked Questions
+description: Find quick answers to common queries about using Relevize for documentation management.
+---
+
+## Account Setup
+
+Get started quickly with Relevize. Use these steps to create and configure your account.
+
+<Callout kind="tip">
+  Sign up with your work email for seamless team integration.
+</Callout>
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Visit `https://app.relevize.com/signup` and enter your email and password.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for the verification link and click it to activate.
+  </Step>
+  <Step title="Set Workspace" icon="settings">
+    Choose a workspace name like `my-project-docs` and select your plan.
+  </Step>
+</Steps>
+
+<ExpandableGroup>
+  <Expandable title="What if I forget my password?" default-open="false">
+
+  Reset it via the login page. Click `Forgot Password?`, enter your email, and follow the secure link sent to your inbox. Links expire in 1 hour.
+
+  </Expandable>
+</ExpandableGroup>
+
+## Content Organization
+
+Organize your documentation efficiently using folders, tags, and search.
+
+<Columns cols={2}>
+  <Card title="Folders" icon="folder" href="/docs/folders">
+    Create nested structures for guides, APIs, and changelogs.
+  </Card>
+  <Card title="Tags" icon="tag" href="/docs/tags">
+    Label pages with `feature`, `api`, or custom tags for quick filtering.
+  </Card>
+  <Card title="Search" icon="search" href="/docs/search">
+    Full-text search across all docs with syntax highlighting.
+  </Card>
+</Columns>
+
+## Collaboration Queries
+
+Invite teammates and manage permissions smoothly.
+
+<Tabs>
+  <Tab title="Invite User" icon="user-plus">
+    Go to Workspace Settings > Members > Invite. Enter emails and select roles: Admin, Editor, or Viewer.
+  </Tab>
+  <Tab title="Permissions" icon="shield">
+    Editors can edit and publish; Viewers read-only. Use page-level locks for sensitive content.
+  </Tab>
+</Tabs>
+
+<Expandable title="How do I review changes?">
+  Enable version history on pages. Click `History` to compare diffs and revert if needed.
+</Expandable>
+
+## Integration and Export
+
+Connect Relevize to your tools and export content easily.
+
+<CodeGroup tabs="GitHub,API">
+  ```yaml
+  # .relevize.yml in repo root
+  workspace: my-project-docs
+  branch: main
+  sync:
+    docs: /docs/*
+  ```
+  ```javascript
+  // Push docs via API
+  const response = await fetch('https://api.relevize.com/v1/pages', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer YOUR_API_KEY',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      path: '/api/intro',
+      content: '# API Intro\nWelcome to the docs.'
+    })
+  });
+  ```
+</CodeGroup>
+
+<Callout kind="info">
+  Generate `YOUR_API_KEY` from Workspace > Integrations. Keep it secure.
+</Callout>
+
+### Export Options
+
+| Format | Use Case                  | Steps                          |
+|--------|---------------------------|--------------------------------|
+| PDF    | Printable guides          | Pages > Export > PDF           |
+| Markdown | Git sync or backups     | Select pages > Export > MD ZIP |
+| HTML   | Static site hosting       | Full workspace > Export > HTML |
+
+For custom exports, use the API endpoint `/v1/export/{format}` with your token.

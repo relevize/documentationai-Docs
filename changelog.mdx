@@ -1,0 +1,133 @@
+---
+title: Changelog
+description: Stay informed about the latest updates, new features, and improvements in Relevize.
+---
+
+## Stay Up to Date
+
+Relevize releases updates regularly to enhance your documentation experience. You receive new features, performance improvements, and bug fixes that make managing your docs easier. Check this changelog to see what's new and plan your upgrades.
+
+<Columns cols={3}>
+  <Card title="Latest Release" icon="zap" href="#v1-2-0">
+    Discover v1.2.0 features and fixes.
+  </Card>
+  <Card title="Migration Guide" icon="settings" href="#migration">
+    Step-by-step upgrade instructions.
+  </Card>
+  <Card title="Report Issues" icon="github" href="https://github.com/relevize/docs/issues" target="_blank">
+    Help improve Relevize.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Enable notifications in your Relevize dashboard to get email alerts for major releases.
+</Callout>
+
+## Recent Releases
+
+### v1.2.0 - Real-time Collaboration
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaborative editing for docs. Multiple users now edit simultaneously with live cursors and conflict resolution.
+- Introduced version history with diff viewer. You compare changes across revisions easily.
+
+## Improvements
+
+- Enhanced search with fuzzy matching and full-text indexing for faster results.
+- Optimized rendering for large docs, reducing load times by `>40%`.
+
+## Bug Fixes
+
+- Fixed markdown parsing issues with nested lists and tables.
+- Resolved authentication errors during API token refreshes.
+
+</Update>
+
+### v1.1.0 - Advanced Analytics
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Launched analytics dashboard. Track doc views, popular pages, and user engagement metrics.
+- Added custom domains support. Host your docs at `yourdomain.com/docs`.
+
+## Improvements
+
+- Upgraded editor with AI-powered suggestions for headings and code snippets.
+
+## Bug Fixes
+
+- Patched sidebar navigation glitches on mobile devices.
+- Corrected export failures for PDFs with images.
+
+</Update>
+
+### v1.0.0 - Initial Release
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core documentation platform with MDX support and component library.
+- Integrated version control with GitHub sync.
+- Built-in search and full-text indexing.
+
+## Breaking Changes
+
+- Updated config format from YAML to JSON for better performance.
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to update Relevize smoothly.
+
+<Steps>
+  <Step title="Backup Your Docs" icon="database">
+    Export your documentation space via the dashboard.
+  </Step>
+  <Step title="Update Configuration">
+    <Tabs>
+      <Tab title="CLI" icon="terminal">
+        ```bash
+        npm update @relevize/cli --save
+        relevize migrate config.json
+        ```
+      </Tab>
+      <Tab title="Dashboard" icon="settings">
+        Go to Settings {">"} Updates and click "Upgrade Now".
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step title="Test Changes" icon="play">
+    Verify key features like search and editing work as expected.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="CLI,Dashboard">
+  ```bash
+  relevize upgrade --version 1.2.0
+  ```
+  ```json
+  {
+    "version": "1.2.0",
+    "features": ["collaboration", "analytics"]
+  }
+  ```
+</CodeGroup>
+
+## Upcoming Changes
+
+<Expandable title="Sneak Peek: v1.3.0" default-open="false">
+
+You can expect AI-assisted doc generation and plugin ecosystem in the next release. Prepare by reviewing your current workflows.
+
+</Expandable>
+
+<Callout kind="info">
+  Found a bug or have feedback? Open an issue on GitHub.
+</Callout>

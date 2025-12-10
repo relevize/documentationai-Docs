@@ -1,0 +1,128 @@
+---
+title: Managing Your Documentation
+description: Comprehensive guide to organizing, updating, and maintaining high-quality documentation within Relevize.
+---
+
+## Quick Actions
+
+<Columns cols={3}>
+  <Card title="Structure Topics" icon="layout" href="#structuring-your-content">
+    Organize your docs into logical sections and pages.
+  </Card>
+  <Card title="Add Search & Links" icon="search" href="#search-and-linking">
+    Enable fast navigation with search and hyperlinks.
+  </Card>
+  <Card title="Export Docs" icon="download" href="#exporting-and-sharing">
+    Share your documentation in multiple formats.
+  </Card>
+</Columns>
+
+## Structuring Your Content
+
+Organize your Relevize documentation into a clear hierarchy to improve navigation and user experience. Start by creating top-level topics, then add subpages and nested content.
+
+<Steps>
+  <Step title="Create Top-Level Topics" icon="folder">
+    Navigate to your workspace dashboard. Click **New Topic** and enter a title like "API Reference".
+  </Step>
+  <Step title="Add Subpages">
+    Inside a topic, select **New Page**. Use the frontmatter to set titles and descriptions:
+    
+````mdx
+```yaml
+---
+title: Authentication
+description: Manage user sessions and API keys.
+---
+```
+````
+  </Step>
+  <Step title="Nest Content">
+    Drag and drop pages to create nested structures. Limit depth to three levels for optimal readability.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use consistent naming conventions, such as "Verb + Noun" (e.g., "Install SDK", "Configure Settings").
+</Callout>
+
+## Search and Linking Features
+
+Relevize provides powerful search and linking tools. Enable full-text search across your docs and create seamless internal and external links.
+
+<Tabs>
+  <Tab title="Internal Links" icon="link">
+    Link to other pages using relative paths.
+    
+    <CodeGroup tabs="MDX,Frontmatter">
+````mdx
+```mdx
+[Go to Authentication](/docs/auth)
+```
+````
+
+````mdx
+```yaml
+links:
+  - title: Authentication
+    href: /docs/auth
+```
+````
+    </CodeGroup>
+  </Tab>
+  <Tab title="External Links" icon="external-link">
+    Point to resources outside Relevize.
+    
+    ```mdx
+    [Relevize GitHub](https://github.com/relevize/docs)
+    ```
+  </Tab>
+  <Tab title="Search Configuration" icon="search">
+    Customize search in workspace settings:
+    
+    ```json
+    {
+      "enableSynonyms": true,
+      "minSearchLength": 3
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Exporting and Sharing Docs
+
+Export your documentation for offline use or sharing. Relevize supports multiple formats.
+
+<Columns cols={2}>
+  <Card title="PDF Export" icon="file-text" horizontal>
+    Generate printable PDFs with one click. Ideal for handbooks.
+  </Card>
+  <Card title="Markdown ZIP" icon="package" horizontal>
+    Download all pages as a ZIP file. Perfect for GitHub repos.
+  </Card>
+</Columns>
+
+To share publicly, generate a read-only link from the workspace menu.
+
+## Best Practices for Maintenance
+
+Follow these practices to keep your docs current and user-friendly.
+
+| Practice | Description | Frequency |
+|----------|-------------|-----------|
+| Review Content | Audit for accuracy and outdated info | Quarterly |
+| Update Links | Check broken links using built-in validator | Monthly |
+| Gather Feedback | Enable comments and review user suggestions | Ongoing |
+| Version Control | Use Git integration for change tracking | Per release |
+
+<Expandable title="Advanced Maintenance Tips" default-open="false">
+
+- Automate deployments with CI/CD pipelines.
+- Track metrics like page views and search queries.
+- Use tags for categorizing updates: `{["feature", "bugfix"]}`.
+
+</Expandable>
+
+<Callout kind="success">
+  Regularly maintain your docs to boost user satisfaction and reduce support tickets.
+</Callout>
